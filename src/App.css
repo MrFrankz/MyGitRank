@@ -1,0 +1,209 @@
+body {
+  font-family: sans-serif;
+}
+
+.main-header {
+    -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 5px 40px;
+  border: none;
+  font: normal 14px/1  sans-serif;
+  color: rgba(255,255,255,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(99,99,99,1);
+  -webkit-box-shadow: 0 0 2px 0 rgba(0,0,0,0.5) inset;
+  box-shadow: 0 -1px 4px 0 rgba(0,0,0,0.5) inset;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.58) ;
+}
+
+.main-header h1 {
+    line-height: 1;
+    margin: 0;
+    font-weight: 400;
+}
+
+.main-header a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+.Root {
+  height: 100vh;
+}
+
+.MainPanel {
+  height: 100%;
+  display: flex;
+}
+
+.ListPanel {
+  width: 15rem;
+  background: #263238;
+  list-style-type: none;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+.DetailPanel {
+  flex: 1;
+  display: none;
+  padding: 1.5rem 2rem;
+}
+.DetailPanel.active {
+  display: block;
+}
+
+.Button {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  height: 2rem;
+  padding: 0.5rem 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: left;
+  color: #fff;
+}
+.Button:focus,
+.Button:hover {
+  outline: 0;
+  background: #37474F;
+}
+.Tab.active .Button {
+  background: #0091EA;
+}
+
+.ButtonPage {
+  display: inline-block;
+  width: 50%;
+  height: 2rem;
+  padding: 0.5rem 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  float: left;
+}
+.ButtonPage:focus,
+.ButtonPage:hover {
+  outline: 0;
+  background: #37474F;
+}
+.Tab.active .ButtonPage {
+  background: #0091EA;
+}
+
+
+.myinput {
+  display: inline-block;
+  width: 30%;
+  float: left;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 3px 15px;
+  padding: 0 6px;
+  border: 2px solid #b7b7b7;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+select {
+  display: inline-block;
+  width: 30%;
+  float: left;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 3px 15px;
+  padding: 0 6px;
+  border: 2px solid #b7b7b7;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  font: normal 16px/normal "Times New Roman", Times, serif;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.boxindi {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 120px;
+  margin: 10px;
+  padding: 35px 35px 25px;
+  overflow: hidden;
+  float: left;
+  border: none;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal 32px/1 Tahoma, Geneva, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(38,168,255,1);
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3) inset;
+  box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3) inset;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5) ;
+}
+
+.smalltext{
+    font: normal 20px/1 Tahoma, Geneva, sans-serif;
+    line-height: 1.8;
+}
+
+.boxes{
+  width: 630px;
+  margin: 0 auto;
+}
+
+.title{
+  -webkit-box-sizing: content-box;
+    text-align: center;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 40px/1 Tahoma, Geneva, sans-serif;
+  color: rgba(142,142,142,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.41) ;
+    margin: 10px;
+  padding: 5px 5px 12px;
+}
