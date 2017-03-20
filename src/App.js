@@ -2,7 +2,16 @@ import React, { Component } from 'react';
 import $ from 'jquery'; 
 import './App.css';
 
+//***********Variables*********
+var names =  []; // the names of repositories of the current page
+var starshave = [];
+var forkshave = [];
+var issueshave = [];
+var pagecount = 1; //page number
+var currentlan = "All"; // the current language that shown
+var prev = 0; // the previous page
 
+//***********Some Nodes*************
 const ListPanel = ({ children }) => (
   <ul className="ListPanel">
     { children }
@@ -61,15 +70,19 @@ const DetailPanel = ({
   </div>
 )
 
-var names =  [];
-var starshave = [];
-var forkshave = [];
-var issueshave = [];
-var pagecount = 1;
-var currentlan = "All";
+const Button = ({ children }) => (
+  <button className="Button">
+    { children }
+  </button>
+)
 
+const ButtonPage = ({ children }) => (
+  <button className="ButtonPage">
+    { children }
+  </button>
+)
 
-
+//****************AJAX interaction with Github API***************
 function getresponame() {
 			console.log(currentlan);
     		var url = 'https://api.github.com/search/repositories?q=stars%3A>1';
@@ -95,8 +108,7 @@ function getresponame() {
     		});
 }
 
-var prev = 0;
-
+//******************Main Panel render class******************
 class MainPanel extends Component {
   constructor(props) {
     super(props);
@@ -116,7 +128,7 @@ class MainPanel extends Component {
   }
 
   handleClick(tab) {
-  	console.log("onClick");
+  	//console.log("onClick");
     return () =>this.setSelected(tab);
   }
   handleClickPageL(tab) {
@@ -124,7 +136,6 @@ class MainPanel extends Component {
   		return;
   	}
   	pagecount--;
-  	//console.log("onClick!");
   	
   	if (prev === tab) { tab -= 2;};
   	prev = tab;
@@ -135,7 +146,7 @@ class MainPanel extends Component {
   }
   handleClickPageR(tab) {
   	pagecount++;
-  	console.log("onClick!");
+  	//console.log("onClick!");
   	if (prev === tab) { tab -= 2;};
   	prev = tab ;
   	//getresponame();
@@ -269,25 +280,14 @@ class MainPanel extends Component {
   }
 }
 
-const Button = ({ children }) => (
-  <button className="Button">
-    { children }
-  </button>
-)
-
-const ButtonPage = ({ children }) => (
-  <button className="ButtonPage">
-    { children }
-  </button>
-)
-
+// ***************Root******************
 const Root = () => (
   <div className="Root">
 	<header className="main-header">
         <h1>MyGitRank</h1>
     </header>
 
-    <MainPanel selected={ 1 }>
+    <MainPanel selected={ 0 }>
       <ListPanel>
 
         <Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab>
