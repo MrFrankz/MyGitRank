@@ -5,7 +5,7 @@ This is my first ReactJs project which allows clients to view a ranked list of r
 2. `npm install`
 3. `npm start`
 ## Test environment?
-* (Important!)To achieve the best experience, 1024*768 resolution is recommended.
+* (Important!)To achieve the best experience, 1024*768 resolution or larger is recommended.
 * My test environment is under MacOS 10.12 and Chrome 56.0.2924 (64-bit).
 ## How does it work?
 * Click on any repositories' name on the list and the detail will be shown on the detail view.
