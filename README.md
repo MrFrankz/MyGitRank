@@ -1,5 +1,6 @@
 # MyGitRank
 This is my first ReactJs project which allows clients to view a ranked list of repositories on Github and see the details of each response by using Github API.
+* (Important before start!) Due to the rate limitation of Github API, you can only make up to 10 requests per minute. So keep yourself slow down, otherwise you may get 403 from Github(wait a moment and refresh will solve the problem).
 ## How to run this project?
 1. Download or clone this repository.
 2. `npm install`
@@ -13,7 +14,7 @@ This is my first ReactJs project which allows clients to view a ranked list of r
 * Type in any integer(number should not be smaller than 1) in the input field, to jump to the page that you want.
 * Selecting the language you want in the selection language will give you the repositories in that language.
 * This project should be responsive for any screen resolution larger than 1024*768.
-* (Important!) Due to rate limitation of Github API, you can only make up to10 requests per minute.
+* (Important!) Due to the rate limitation of Github API, you can only make up to 10 requests per minute.
 ## How did I implement this project?
 I implemented this project in around 10.5 hours in total(3 hours learning + 7.5 hours implementing):
 1. Learning React(3 hours)
