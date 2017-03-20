@@ -26,6 +26,5 @@ I implemented this project in around 10.5 hours in total(3 hours learning + 7.5 
 8. README.md and code cleaning (0.5 hour)
 ## What can be improved?
 * A responsive design for smaller size of screen(i.e smartphones)
-* More detailed information for each repository
-* An icon for each repository
+* More detailed information for each repository and an icon for each repository
 * Use Ajax to fetch more information in once to reduce the number of requests to Github
