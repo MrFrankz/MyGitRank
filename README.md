@@ -29,7 +29,7 @@ I implemented this project in around 10.5 hours in total(3 hours learning + 7.5 
 * More detailed information for each repository and an icon for each repository
 * Use Ajax to fetch more information in once to reduce the number of requests to Github
 ## Some references:
-(Most of the online code reused is on CSS)
+(Most of the online code reused was on CSS)
 * http://enjoycss.com/
 * https://developer.github.com/v3/search/#search-repositories
 * https://facebook.github.io/react/tutorial/tutorial.html

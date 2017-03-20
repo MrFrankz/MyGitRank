@@ -132,7 +132,7 @@ class MainPanel extends Component {
     return () =>this.setSelected(tab);
   }
   handleClickPageL(tab) {
-  	if (pagecount === 1) {
+  	if (pagecount === 1) { // pagenum outof range
   		return;
   	}
   	pagecount--;
@@ -158,12 +158,11 @@ class MainPanel extends Component {
 
   handleSubmit = (event) => {
 	if(event.key === 'Enter'){
-		if (document.getElementById("Pageinput").value <= 0) {
+		if (document.getElementById("Pageinput").value <= 0) { // pagenum outof range
 			alert("Invalid Input: Page number cannot be smaller than 1");
 			document.getElementById("Pageinput").value = ''
 			return;
 		}
-    //alert('A name was submitted: ' + );
 	this.setState({value: document.getElementById("Pageinput").value});
 	pagecount=document.getElementById("Pageinput").value;
 	document.getElementById("Pageinput").value = '';
@@ -189,41 +188,28 @@ class MainPanel extends Component {
         if (childTab.type.name === "Tab") {
         	const _isActive = (tab === this.state.selected);
           	const _onClick =  this.handleClick(tab);
-
           	tab++;
           	count++;
-
           	return React.cloneElement(childTab, { _isActive, _onClick }, (<Button>{(this.state.value-1)*20+count+1}. {names[count]}</Button>));
         } if (childTab.type.name === "TabPage" && count ===19) {
         	const _isActive = (tab === this.state.selected);
           	const _onClick = () => this.handleClickPageL(tab);
-
           	tab++;
           	count++;
-
           	return React.cloneElement(childTab, { _isActive, _onClick }, (<ButtonPage> &lt;</ButtonPage>));
         } if (childTab.type.name === "TabPage" && count ===20) {
         	const _isActive = (tab === this.state.selected);
           	const _onClick = () => this.handleClickPageR(tab);
-
           	tab++;
           	count++;
-
           	return React.cloneElement(childTab, { _isActive, _onClick }, (<ButtonPage> &gt;</ButtonPage>));
         } if (childTab.type.name === "TabInput") {
-        	
-
           	tab++;
           	count++;
-
           	return React.cloneElement(childTab, {  }, (
-          		
-        
           <input id="Pageinput" onKeyDown={this.handleSubmit} className="myinput" placeholder="Jump to..." />
 		));
         } if (childTab.type.name === "TabSelect") {
-        	
-
           	tab++;
           	count++;
 
