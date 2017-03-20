@@ -112,9 +112,9 @@ function getresponame() {
 class MainPanel extends Component {
   constructor(props) {
     super(props);
-      this.state = { selected: this.props.selected,
-  			value: 1,
-  			language: "All"};
+      this.state = { selected: this.props.selected /*current tab selected*/,
+  			value: 1, /* current page number*/
+  			language: "All" /* current language*/};
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -252,11 +252,11 @@ class MainPanel extends Component {
     let panel = 0
 
     return React.Children.map(children, (child) => {
-      if (child.type.name === "ListPanel") {
+      if (child.type.name === "ListPanel") { // render the list panel
         return this.renderTabList(child)
       }
 
-      if (child.type.name === "DetailPanel") {
+      if (child.type.name === "DetailPanel") { // render the detail panel
         const _isActive = (panel === this.state.selected)
         panel++
 
@@ -289,12 +289,10 @@ const Root = () => (
 
     <MainPanel selected={ 0 }>
       <ListPanel>
-
         <Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab>
         <Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab>
         <Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab>
         <Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab><Tab></Tab><TabPage></TabPage><TabPage></TabPage><TabInput></TabInput><TabSelect></TabSelect>
-        
       </ListPanel>
      
       <DetailPanel></DetailPanel><DetailPanel>test</DetailPanel><DetailPanel>test</DetailPanel><DetailPanel>test</DetailPanel>
